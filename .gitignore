@@ -1,0 +1,6 @@
+.config/vesktop/Crashpad/
+.config/vesktop/sessionData/
+.config/vesktop/state.json
+.config/dconf/
+.config/session/
+.config/pulse/

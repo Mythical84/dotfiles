@@ -1,0 +1,17 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+	"modules-left": [],
+	"modules-center": [],
+	"modules-right": [/*"network", */"backlight"/*, "clock"*/],
+	"backlight": {
+		"format": "{icon} {percent}% ",
+		"format-icons": [
+			"<span color='#555555'>󰃞</span>",
+			"<span color='#A7A7A7'>󰃟</span>",
+			"<span color='#CECE1C'>󰃝</span>",
+			"<span color='#E4E300'>󰃠</span>"
+		]
+	}
+}
