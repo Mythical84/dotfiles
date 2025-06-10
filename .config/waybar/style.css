@@ -80,14 +80,12 @@
 /*#tray:hover,*/
 #backlight:hover,
 #battery:hover,
-#pulseaudio:hover,
+#wireplumber:hover,
+#disk:hover,
 #custom-temperature:hover,
 #memory:hover,
 #cpu:hover,
 #clock:hover,
-#custom-lock:hover,
-#custom-reboot:hover,
-#custom-power:hover,
 /*#workspaces:hover,*/
 #window:hover {
   background-color: rgba(70, 75, 90, 0.9);

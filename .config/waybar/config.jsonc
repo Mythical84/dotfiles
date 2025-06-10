@@ -8,6 +8,7 @@
 	"modules-right": ["network", "battery", "backlight", "wireplumber", "disk", "memory", "clock"],
 	"backlight": {
 		"format": "{icon} {percent}% ",
+		"tooltip": "false",
 		"format-icons": [
 			"<span color='#555555'>󰃞</span>",
 			"<span color='#A7A7A7'>󰃟</span>",
@@ -63,6 +64,7 @@
 	},
 	"hyprland/window": {
 		"format": "{}",
+		"tooltip": false,
 		"rewrite": {
        "nvim (.*)": " $1",
 			 "(.*) — Mozilla Firefox": "<span color='#E98B0F'>󰈹</span> Firefox"
