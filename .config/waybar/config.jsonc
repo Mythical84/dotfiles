@@ -4,7 +4,6 @@
 	// TODO: Add back cava
 	// TODO: look into the group module combined with waybar-wlr-taskbar
 	"modules-left": ["hyprland/workspaces", "cava", "tray"],
-	"modules-center": ["hyprland/window", "hyprland/submap"],
 	"modules-right": ["network", "battery", "backlight", "wireplumber", "disk", "memory", "clock"],
 	"backlight": {
 		"format": "{icon} {percent}% ",
@@ -49,7 +48,7 @@
 	},
 	"clock": {
 		"interval": 1,
-		"format": "<span color='#BC00CE'></span> {:%a %I:%M %p}",
+		"format": "<span color='#BC00CE'></span> {:%a %I:%M %p} ",
 		"tooltip-format": "{:%B%e,%Y}"
 	},
 	"disk": {
@@ -61,14 +60,6 @@
 		"persistent-workspaces": {
 			"*": [1, 2, 3, 4, 5]
 		}
-	},
-	"hyprland/window": {
-		"format": "{}",
-		"tooltip": false,
-		"rewrite": {
-       "nvim (.*)": " $1",
-			 "(.*) — Mozilla Firefox": "<span color='#E98B0F'>󰈹</span> Firefox"
-    }
 	},
 	"memory": {
 		"interval": 1,
