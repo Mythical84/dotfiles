@@ -57,7 +57,7 @@
 #wireplumber,
 #backlight,
 #custom-temperature,
-#memory,
+#custom-memory,
 #disk,
 #cava,
 #cpu{
@@ -83,7 +83,7 @@
 #wireplumber:hover,
 #disk:hover,
 #custom-temperature:hover,
-#memory:hover,
+#custom-memory:hover,
 #cpu:hover,
 #clock:hover,
 /*#workspaces:hover,*/

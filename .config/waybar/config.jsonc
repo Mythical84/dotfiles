@@ -4,7 +4,7 @@
 	// TODO: Add back cava
 	// TODO: look into the group module combined with waybar-wlr-taskbar
 	"modules-left": ["hyprland/workspaces", "cava", "tray"],
-	"modules-right": ["network", "battery", "backlight", "wireplumber", "disk", "memory", "clock"],
+	"modules-right": ["network", "battery", "backlight", "wireplumber", "disk", "custom/memory", "clock"],
 	"backlight": {
 		"format": "{icon} {percent}% ",
 		"tooltip": "false",
@@ -61,9 +61,9 @@
 			"*": [1, 2, 3, 4, 5]
 		}
 	},
-	"memory": {
-		"interval": 1,
-		"format": "<span color='#EE0038'></span> {used:0.1f}/{total:0.1f} GiB ",
+	"custom/memory": {
+		"exec": "bash $HOME/.config/waybar/ram.sh",
+		"format": "<span color='#EE0038'></span> {text} GB "
 		"tooltip": false
 	},
 	"network": {
