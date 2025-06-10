@@ -16,6 +16,7 @@
 /* 所有模块统一风格 */
 #workspaces,
 #window,
+#cava,
 #tray{
   /*background-color: rgba(29,31,46, 0.95);*/
   background-color: rgba(15,27,53,0.9);
@@ -49,13 +50,16 @@
   border-width: 0px;
 }
 
+#tray menu,
 #custom-reboot,
 #bluetooth,
 #battery,
-#pulseaudio,
+#wireplumber,
 #backlight,
 #custom-temperature,
 #memory,
+#disk,
+#cava,
 #cpu{
   background-color: rgba(15,27,53,0.9);
   margin-top: 6px; /* 与屏幕顶部留出距离 */
@@ -119,4 +123,3 @@
   font-weight: 500;
   font-style: italic;
 }
-

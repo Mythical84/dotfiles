@@ -1,17 +1,90 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 32,
-	"modules-left": [],
-	"modules-center": [],
-	"modules-right": [/*"network", */"backlight"/*, "clock"*/],
+	// TODO: Add back cava
+	// TODO: look into the group module combined with waybar-wlr-taskbar
+	"modules-left": ["hyprland/workspaces", "cava", "tray"],
+	"modules-center": ["hyprland/window", "hyprland/submap"],
+	"modules-right": ["network", "battery", "backlight", "wireplumber", "disk", "memory", "clock"],
 	"backlight": {
 		"format": "{icon} {percent}% ",
 		"format-icons": [
 			"<span color='#555555'>󰃞</span>",
 			"<span color='#A7A7A7'>󰃟</span>",
-			"<span color='#CECE1C'>󰃝</span>",
+			"<span color='#B0AF00'>󰃝</span>",
 			"<span color='#E4E300'>󰃠</span>"
 		]
+	},
+	"battery": {
+		"format": "<span color='#28DD00'>{icon}</span> {capacity}% ",
+		"full-at": 98,
+		"interval": 1,
+		"states": {
+			"warning": 20,
+			"critical": 10 
+		},
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+		"format-charging": "<span color='#28DD00'>󰂉</span> {capacity}% ",
+		"format-plugged": "<span color='#28DD00'>󰂅</span> {capacity}% ",
+		"format-warning": "<span color='#F3F600'>{icon}</span> {capacity}% ",
+		"format-critical": "<span color='#EE2600'>{icon}</span> {capacity}% "
+	},
+	"cava": {
+		"format-icons" : [
+			"<span color='#003f5c'>▁</span>",
+			"<span color='#58508d'>▂</span>", 
+			"<span color='#8a508f'>▃</span>", 
+			"<span color='#bc5090'>▄</span>", 
+			"<span color='#de5a79'>▅</span>", 
+			"<span color='#ff6361'>▆</span>",
+			"<span color='#ff8531'>▇</span>", 
+			"<span color='#ffa600'>█</span>"
+		],
+		"bar_delimiter": 0,
+		"bars": 12,
+		"framerate": 60,
+		"monstercat": true,
+		"waves": true
+	},
+	"clock": {
+		"interval": 1,
+		"format": "<span color='#BC00CE'></span> {:%a %I:%M %p}",
+		"tooltip-format": "{:%B%e,%Y}"
+	},
+	"disk": {
+		"format": "<span color='#E5A50C'></span> {specific_free:0.2f} GB ",
+		"tooltip-format": "{used} used out of {total} ({percentage_used}%)",
+		"unit": "GB"
+	},
+	"hyprland/workspaces": {
+		"persistent-workspaces": {
+			"*": [1, 2, 3, 4, 5]
+		}
+	},
+	"hyprland/window": {
+		"format": "{}",
+		"rewrite": {
+       "nvim (.*)": " $1",
+			 "(.*) — Mozilla Firefox": "<span color='#E98B0F'>󰈹</span> Firefox"
+    }
+	},
+	"memory": {
+		"interval": 1,
+		"format": "<span color='#EE0038'></span> {used:0.1f}/{total:0.1f} GiB ",
+		"tooltip": false
+	},
+	"network": {
+		"format": "<span color='#0AE4D3'>{icon} </span>{essid} ",
+		"format-disconnected": " <span color='#E41A0A'>󰤮</span> ",
+		"format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"]
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
+	"wireplumber": {
+		"format": "<span color='#E7F106'> </span>{volume}% ",
+		"format-muted": "<span color='#EE2600'>󰟎 </span>{volume}% ",
+		"on-click": "pactl set-sink-mute 0 toggle"
 	}
 }
