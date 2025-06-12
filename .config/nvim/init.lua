@@ -23,6 +23,7 @@ require('lazy').setup({
 
 ---------- LSP ----------
 vim.lsp.enable('rust_analyzer')
+vim.lsp.enable('svelte')
 local cmp = require('cmp')
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
@@ -71,6 +72,9 @@ cmp.setup.cmdline(':', {
 })
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['rust_analyzer'].setup {
+	capabilities = capabilities
+}
+require('lspconfig')['svelte'].setup {
 	capabilities = capabilities
 }
 
