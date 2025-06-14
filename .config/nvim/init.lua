@@ -1,29 +1,40 @@
-require('setup.lazy')
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 require('lazy').setup({
 	spec = {
-		'neovim/nvim-lspconfig', --premade configs for neovim native lsp
-		'hrsh7th/nvim-cmp', --neovim native lsp autocomplete
-		'hrsh7th/cmp-buffer', --lsp autocomplete required library
-		'hrsh7th/cmp-path', --lsp autocomplete required library 
-		'hrsh7th/cmp-nvim-lsp', --lsp autocomplete required library 
-		'petertriho/cmp-git', --Compatibility layer for git and autocomplete
-		'nvim-lua/plenary.nvim', --Required to get autocomplete to work, no clue why
-		{
-				"rachartier/tiny-inline-diagnostic.nvim",
-				event = "VeryLazy", -- Or `LspAttach`
-				priority = 1000, -- needs to be loaded in first
-				config = function()
-						require('tiny-inline-diagnostic').setup()
-						vim.diagnostic.config({ virtual_text = false }) -- Only if needed in your configuration, if you already have native LSP diagnostics
-				end
-		}	
-	}
+		{ import='plugins' }
+	},
+	change_detection = {
+		notify = false
+	},
 })
 
 ---------- LSP ----------
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('svelte')
+vim.lsp.enable('pyright')
+
+vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
+
+--[[
 local cmp = require('cmp')
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
@@ -77,6 +88,7 @@ require('lspconfig')['rust_analyzer'].setup {
 require('lspconfig')['svelte'].setup {
 	capabilities = capabilities
 }
+]]--
 
 ---------- Variables ----------
 vim.opt.number = true
@@ -84,3 +96,8 @@ vim.opt.splitbelow = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.wrap = false
+
+
+-- Colorscheme
+vim.cmd.colorscheme('onedark')
+vim.cmd('highlight LineNr ctermfg=grey')

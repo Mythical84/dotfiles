@@ -49,7 +49,7 @@
 	"clock": {
 		"interval": 1,
 		"format": "<span color='#BC00CE'></span> {:%a %I:%M %p} ",
-		"tooltip-format": "{:%B%e,%Y}"
+		"tooltip-format": "{:%B %e, %Y}"
 	},
 	"disk": {
 		"format": "<span color='#E5A50C'></span> {specific_free:0.2f} GB ",
