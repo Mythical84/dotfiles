@@ -31,64 +31,7 @@ require('lazy').setup({
 vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('svelte')
 vim.lsp.enable('pyright')
-
-vim.opt.completeopt = { "menu", "menuone", "noinsert", "noselect" }
-
---[[
-local cmp = require('cmp')
-cmp.setup({
-	mapping = cmp.mapping.preset.insert({
-		['<TAB>'] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			else
-				fallback()
-			end
-		end, { 'i', 's' }),
-		['<S-TAB>'] = cmp.mapping(function()
-			if cmp.visible() then
-				cmp.select_prev_item()
-      end
-		end, { 'i', 's' }),
-		['<CR>'] = cmp.mapping.confirm({ select = true }),
-	}),
-	sources = cmp.config.sources({
-		{ name='nvim_lsp' }
-	}, {
-		{ name='buffer' },
-	})
-})
-cmp.setup.filetype('gitcommit', {
-	sources = cmp.config.sources({
-		{ name = 'git' },
-	}, {
-		{ name = 'buffer' },
-	})
-})
-require("cmp_git").setup()
-cmp.setup.cmdline({ '/', '?' }, {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = {
-		{ name = 'buffer' }
-	}
-})
-cmp.setup.cmdline(':', {
-	mapping = cmp.mapping.preset.cmdline(),
-	sources = cmp.config.sources({
-		{ name = 'path' }
-	}, {
-		{ name = 'cmdline' }
-	}),
-	matching = { disallow_symbol_nonprefix_matching = false }
-})
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('lspconfig')['rust_analyzer'].setup {
-	capabilities = capabilities
-}
-require('lspconfig')['svelte'].setup {
-	capabilities = capabilities
-}
-]]--
+vim.lsp.enable('lua_ls')
 
 ---------- Variables ----------
 vim.opt.number = true
@@ -97,7 +40,23 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.wrap = false
 
-
 -- Colorscheme
 vim.cmd.colorscheme('onedark')
 vim.cmd('highlight LineNr ctermfg=grey')
+
+require("vim.treesitter.query").set(
+  "svelte",
+  "injections",
+  [[
+  (
+    element
+      (start_tag
+        (attribute
+          (attribute_name) @_attr_name (#eq? @_attr_name "lang")
+          (quoted_attribute_value (attribute_value) @_attr_value (#match? @_attr_value "ts"))
+        )
+      )
+      (raw_text) @typescript
+  )
+  ]]
+)

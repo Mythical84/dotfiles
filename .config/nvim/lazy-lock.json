@@ -1,11 +1,14 @@
 {
-  "blink.cmp": { "branch": "main", "commit": "fe44a7dade1a975957bc4e1c03abddd4fc2fa603" },
+  "blink.cmp": { "branch": "main", "commit": "0fc23d278ef32b89aa9f3f18f3125ef403e23bae" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "lazydev.nvim": { "branch": "main", "commit": "2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c" },
   "lspsaga.nvim": { "branch": "main", "commit": "920b1253e1a26732e53fac78412f6da7f674671d" },
-  "nvim-lspconfig": { "branch": "master", "commit": "583a1d555c8e407868ce00c57e37eca4b7ff960e" },
-  "nvim-treesitter": { "branch": "main", "commit": "c29969e8efbea20b65dcc398d3fc403d5e51d006" },
+  "nvim-lspconfig": { "branch": "master", "commit": "7ad4a11cc5742774877c529fcfb2702f7caf75e4" },
+  "nvim-treesitter": { "branch": "master", "commit": "42fc28ba918343ebfd5565147a42a26580579482" },
   "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" },
   "onedark.vim": { "branch": "main", "commit": "390b893d361c356ac1b00778d849815f2aa44ae4" },
   "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "cac10593c4baaacd0f2a1f4d8ba9508667bf3f79" },
-  "vim-nightfly-guicolors": { "branch": "master", "commit": "8c55003e89f321a48a8cd4bb426dd3e7c58f0646" }
+  "vim-nightfly-guicolors": { "branch": "master", "commit": "8c55003e89f321a48a8cd4bb426dd3e7c58f0646" },
+  "vim-svelte": { "branch": "main", "commit": "f6df955ad86583e9751487eb7550fae9e53d2d6b" },
+  "yats.vim": { "branch": "master", "commit": "b325c449a2db4d9ee38aa441afa850a815982e8b" }
 }
