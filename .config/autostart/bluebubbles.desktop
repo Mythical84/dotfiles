@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=bluebubbles
+Comment=bluebubbles startup script
+Exec=/usr/lib/bluebubbles/bluebubbles minimized
+StartupNotify=false
+Terminal=false

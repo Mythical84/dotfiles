@@ -1,3 +1,19 @@
-
 [Default Applications]
 x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/http=userapp-Waterfox-DPDU82.desktop
+x-scheme-handler/https=userapp-Waterfox-DPDU82.desktop
+x-scheme-handler/chrome=userapp-Waterfox-DPDU82.desktop
+text/html=userapp-Waterfox-DPDU82.desktop
+application/x-extension-htm=userapp-Waterfox-DPDU82.desktop
+application/x-extension-html=userapp-Waterfox-DPDU82.desktop
+application/x-extension-shtml=userapp-Waterfox-DPDU82.desktop
+application/xhtml+xml=userapp-Waterfox-DPDU82.desktop
+application/x-extension-xhtml=userapp-Waterfox-DPDU82.desktop
+application/x-extension-xht=userapp-Waterfox-DPDU82.desktop
+x-scheme-handler/about=brave-browser.desktop
+x-scheme-handler/unknown=brave-browser.desktop
+
+[Added Associations]
+x-scheme-handler/http=userapp-Waterfox-DPDU82.desktop;
+x-scheme-handler/https=userapp-Waterfox-DPDU82.desktop;
+text/html=userapp-Waterfox-DPDU82.desktop;

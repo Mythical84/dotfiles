@@ -32,6 +32,7 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('svelte')
 vim.lsp.enable('pyright')
 vim.lsp.enable('lua_ls')
+vim.lsp.enable('clangd')
 
 ---------- Variables ----------
 vim.opt.number = true
