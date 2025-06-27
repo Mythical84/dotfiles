@@ -10,14 +10,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
       { "\nPress any key to exit..." },
     }, true, {})
     vim.fn.getchar()
-    os.exit(1)
+		os.exit(1)
   end
 end
 vim.opt.rtp:prepend(lazypath)
-
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
-
 require('lazy').setup({
 	spec = {
 		{ import='plugins' }
@@ -42,22 +40,13 @@ vim.opt.shiftwidth = 2
 vim.opt.wrap = false
 
 -- Colorscheme
-vim.cmd.colorscheme('onedark')
+vim.cmd.colorscheme('catppuccin-mocha')
 vim.cmd('highlight LineNr ctermfg=grey')
 
-require("vim.treesitter.query").set(
-  "svelte",
-  "injections",
-  [[
-  (
-    element
-      (start_tag
-        (attribute
-          (attribute_name) @_attr_name (#eq? @_attr_name "lang")
-          (quoted_attribute_value (attribute_value) @_attr_value (#match? @_attr_value "ts"))
-        )
-      )
-      (raw_text) @typescript
-  )
-  ]]
-)
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = { 'python', 'svelte', 'typescript', 'rust', 'lua' },
+	callback = function()
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+		vim.treesitter.start()
+	end,
+})

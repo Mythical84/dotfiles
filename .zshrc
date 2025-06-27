@@ -1,12 +1,11 @@
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
-eval "$(thefuck --alias fuck)"
 echo ""
 
 alias wreset="pkill waybar && hyprctl dispatch exec waybar"
 alias clear='clear && echo ""'
 alias cat=bat
-alias fuck='fuck -y'
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
 set-long-prompt() { 
 	PROMPT=$(starship prompt)
@@ -33,3 +32,9 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fpath=(path/to/zsh-completions/src $fpath)
 autoload -Uz compinit
 rm -f ~/.zcompdump; compinit
+
+export LFS=/mnt/lfs
+umask 022
+export PATH=$PATH:/home/tyler/.local/bin
+
+export TERM=xterm-256color

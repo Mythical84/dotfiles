@@ -7,3 +7,10 @@
 .config/gh/
 .config/Code\ -\ OSS/
 .config/BraveSoftware
+.config/chromium
+.config/unity3d
+.config/menus
+.config/Bitwarden
+.config/bluebubbles-desktop-app
+.config/Proton/
+.config/rustdesk/

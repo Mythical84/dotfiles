@@ -1,0 +1,9 @@
+[[peers]]
+id = '1881536'
+username = 'tartinger'
+hostname = 'tylers-macbook-air.local'
+platform = 'Mac OS'
+online = true
+
+[peers.ip_mac]
+"192.168.68.60" = '05:00:06:03:06:00'
