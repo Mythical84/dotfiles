@@ -1,19 +1,27 @@
 [Default Applications]
 x-scheme-handler/discord=vesktop.desktop
-x-scheme-handler/http=userapp-Waterfox-DPDU82.desktop
-x-scheme-handler/https=userapp-Waterfox-DPDU82.desktop
-x-scheme-handler/chrome=userapp-Waterfox-DPDU82.desktop
-text/html=userapp-Waterfox-DPDU82.desktop
-application/x-extension-htm=userapp-Waterfox-DPDU82.desktop
-application/x-extension-html=userapp-Waterfox-DPDU82.desktop
-application/x-extension-shtml=userapp-Waterfox-DPDU82.desktop
-application/xhtml+xml=userapp-Waterfox-DPDU82.desktop
-application/x-extension-xhtml=userapp-Waterfox-DPDU82.desktop
-application/x-extension-xht=userapp-Waterfox-DPDU82.desktop
-x-scheme-handler/about=brave-browser.desktop
-x-scheme-handler/unknown=brave-browser.desktop
+x-scheme-handler/http=waterfox.desktop
+x-scheme-handler/https=waterfox.desktop
+x-scheme-handler/chrome=zen.desktop
+text/html=waterfox.desktop
+application/x-extension-htm=zen.desktop
+application/x-extension-html=zen.desktop
+application/x-extension-shtml=zen.desktop
+application/xhtml+xml=zen.desktop
+application/x-extension-xhtml=zen.desktop
+application/x-extension-xht=zen.desktop
+x-scheme-handler/about=waterfox.desktop
+x-scheme-handler/unknown=waterfox.desktop
+x-scheme-handler/discord-1038970224050962582=nuclear.desktop
 
 [Added Associations]
-x-scheme-handler/http=userapp-Waterfox-DPDU82.desktop;
-x-scheme-handler/https=userapp-Waterfox-DPDU82.desktop;
-text/html=userapp-Waterfox-DPDU82.desktop;
+x-scheme-handler/http=zen.desktop;userapp-Waterfox-DPDU82.desktop;
+x-scheme-handler/https=zen.desktop;userapp-Waterfox-DPDU82.desktop;
+text/html=userapp-Waterfox-DPDU82.desktop;zen.desktop;
+x-scheme-handler/chrome=zen.desktop;
+application/x-extension-htm=zen.desktop;
+application/x-extension-html=zen.desktop;
+application/x-extension-shtml=zen.desktop;
+application/xhtml+xml=zen.desktop;
+application/x-extension-xhtml=zen.desktop;
+application/x-extension-xht=zen.desktop;

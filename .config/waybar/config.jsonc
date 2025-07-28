@@ -1,7 +1,6 @@
 {
   "layer": "top",
   "position": "top",
-	// TODO: Add back cava
 	// TODO: look into the group module combined with waybar-wlr-taskbar
 	"modules-left": ["hyprland/workspaces", "cava", "tray"],
 	"modules-right": ["network", "battery", "backlight", "wireplumber", "disk", "custom/memory", "clock"],

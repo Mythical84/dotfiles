@@ -7,8 +7,11 @@ return {
 		config = function()
 			require('nvim-treesitter').setup {
 				indent = {
-					enable = true
-				}
+					enable = true,
+				},
+				highlight = {
+					enable = true,
+				},
 			}
 		end
 	}
