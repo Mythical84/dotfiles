@@ -25,6 +25,7 @@ require('lazy').setup({
 	},
 })
 
+require('snippets')
 
 ---------- LSP ----------
 vim.lsp.enable('rust_analyzer') --rust
@@ -41,6 +42,8 @@ vim.o.expandtab = false
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.wrap = false
+vim.o.conceallevel = 1
+vim.o.concealcursor = 'n'
 
 vim.cmd("autocmd Filetype python setlocal tabstop=2 shiftwidth=2 noexpandtab")
 
@@ -48,13 +51,6 @@ vim.api.nvim_create_autocmd('FileType', {
 	pattern = { 'python' },
 	callback = function()
 		vim.cmd([[setlocal noexpandtab tabstop=2 shiftwidth=2]])
-	end
-})
-
-vim.api.nvim_create_autocmd('FileType', {
-	pattern = { 'python' },
-	callback = function()
-		vim.cmd([[setlocal nonumber norelativenumber]])
 	end
 })
 

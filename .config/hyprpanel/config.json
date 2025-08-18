@@ -1,0 +1,9 @@
+{
+  "bar.layouts": {
+    "0": {
+      "left": [],
+      "right": []
+    }
+  },
+  "theme.bar.transparent": true
+}

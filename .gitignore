@@ -15,3 +15,5 @@
 .config/Proton/
 .config/rustdesk/
 .config/dissent/secrets/
+.config/obsidian/
+.config/go/

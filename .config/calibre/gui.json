@@ -363,27 +363,27 @@
   "geometry-of-calibre_main_window_geometry": {
     "frame_geometry": {
       "height": 1072,
-      "width": 1678,
+      "width": 832,
       "x": 0,
       "y": 0
     },
     "full_screened": false,
     "geometry": {
       "height": 1072,
-      "width": 1678,
+      "width": 832,
       "x": 0,
       "y": 0
     },
     "maximized": true,
     "normal_geometry": {
       "height": 1072,
-      "width": 1678,
+      "width": 832,
       "x": 0,
       "y": 0
     },
     "qt": {
       "__class__": "bytearray",
-      "__value__": "AdnQywADAAAAAAAAAAAAAAAABo0AAAQvAAAAAAAAAAAAAAaNAAAELwAAAAACAAAABpwAAAAAAAAAAAAABo0AAAQv"
+      "__value__": "AdnQywADAAAAAAAAAAAAAAAAAz8AAAQvAAAAAAAAAAAAAAM/AAAELwAAAAACAAAABpwAAAAAAAAAAAAAAz8AAAQv"
     },
     "screen": {
       "depth": 32,
@@ -719,7 +719,7 @@
   },
   "grid view visible": false,
   "library_usage_stats": {
-    "/home/tyler/Calibre Library": 22
+    "/home/tyler/Calibre Library": 28
   },
   "main_window_central_widget_state": {
     "layout": "wide",

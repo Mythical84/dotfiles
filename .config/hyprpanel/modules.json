@@ -1,0 +1,10 @@
+{
+  "custom/ram": {
+    "icon": "",
+    "label": "{ram} GB",
+    "execute": "$HOME/.config/hyprpanel/ram.sh",
+    "interval": 10,
+    "hideOnEmpty": false,
+    "truncationSize": -1
+  }
+}

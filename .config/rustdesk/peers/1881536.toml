@@ -17,12 +17,13 @@ size_pf = [
     0,
     0,
 ]
-view_style = 'original'
+view_style = 'adaptive'
 scroll_style = 'scrollauto'
 image_quality = 'balanced'
 custom_image_quality = [50]
 show_remote_cursor = false
 lock_after_session_end = false
+terminal-persistent = false
 privacy_mode = false
 allow_swap_key = false
 port_forwards = []
@@ -39,13 +40,13 @@ sync-init-clipboard = false
 trackpad-speed = 100
 
 [options]
-codec-preference = 'auto'
-alias = 'Bluebubbles Mac'
-zoom-cursor = ''
+i444 = ''
 swap-left-right-mouse = ''
 custom-fps = '30'
-i444 = ''
 touch-mode = ''
+zoom-cursor = ''
+alias = 'Bluebubbles Mac'
+codec-preference = 'auto'
 
 [ui_flutter]
 
