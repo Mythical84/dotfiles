@@ -40,13 +40,13 @@ sync-init-clipboard = false
 trackpad-speed = 100
 
 [options]
-i444 = ''
-swap-left-right-mouse = ''
-custom-fps = '30'
 touch-mode = ''
-zoom-cursor = ''
 alias = 'Bluebubbles Mac'
+i444 = ''
+zoom-cursor = ''
+swap-left-right-mouse = ''
 codec-preference = 'auto'
+custom-fps = '30'
 
 [ui_flutter]
 

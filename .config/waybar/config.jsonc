@@ -58,7 +58,8 @@
 	"hyprland/workspaces": {
 		"persistent-workspaces": {
 			"*": [1, 2, 3, 4, 5]
-		}
+		},
+		"active-only": true
 	},
 	"custom/memory": {
 		"exec": "bash $HOME/.config/waybar/ram.sh",

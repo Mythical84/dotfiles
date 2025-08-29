@@ -28,12 +28,15 @@ require('lazy').setup({
 require('snippets')
 
 ---------- LSP ----------
-vim.lsp.enable('rust_analyzer') --rust
-vim.lsp.enable('svelte')        --svelte
-vim.lsp.enable('pyright')       --python
-vim.lsp.enable('lua_ls')        --lua
-vim.lsp.enable('clangd')        --c
-vim.lsp.enable('cssls')         --css
+local rust = "rust_analyzer"
+local java = "java_language_server"
+vim.lsp.enable(rust)     --rust
+vim.lsp.enable('svelte')   --svelte
+vim.lsp.enable('pyright')  --python
+vim.lsp.enable('lua_ls')   --lua
+vim.lsp.enable('clangd')   --c
+vim.lsp.enable('cssls')    --css
+vim.lsp.enable(java)		 --java
 
 ---------- Variables ----------
 vim.opt.number = true

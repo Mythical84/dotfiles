@@ -5,19 +5,17 @@
     "__class__": "set",
     "__value__": []
   },
+  "notified-version-updates": {
+    "__class__": "set",
+    "__value__": [
+      "8.8"
+    ]
+  },
   "save to disk dialog": "/home/tyler/Downloads",
   "sort_history": [
     [
-      "title",
-      true
-    ],
-    [
-      "authors",
-      true
-    ],
-    [
-      "size",
-      true
+      "timestamp",
+      false
     ],
     [
       "timestamp",
